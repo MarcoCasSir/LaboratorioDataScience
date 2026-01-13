@@ -1,0 +1,12 @@
+jupyter
+ipykernel
+nbformat
+nbconvert
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+plotly
+scikit-learn
+imbalanced-learn
