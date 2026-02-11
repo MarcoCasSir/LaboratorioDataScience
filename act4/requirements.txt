@@ -1,0 +1,14 @@
+jupyter
+ipykernel
+nbformat
+nbconvert
+numpy
+pandas
+pandas-stubs
+scipy
+matplotlib
+seaborn
+plotly
+scikit-learn
+imbalanced-learn
+statsmodels
