@@ -1,15 +1,15 @@
-📑 Índice
+## 📑 Índice
 
-- [Descripción del Proyecto](#-descripción-del-proyecto)
-- [Hoja de Ruta](#-hoja-de-ruta-del-proyecto)
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Hoja de Ruta del Proyecto](#hoja-de-ruta-del-proyecto)
   - [1. Inicio y Configuración](#1-inicio-y-configuración)
   - [2. Entendimiento de los Datos](#2-entendimiento-de-los-datos-crisp-dm)
   - [3. Análisis Exploratorio de Datos](#3-análisis-exploratorio-de-datos-eda)
   - [4. Preparación de Datos con Pipelines](#4-preparación-de-datos-con-pipelines)
   - [5. Modelado y Evaluación](#5-modelado-y-evaluación)
   - [6. Conclusiones y Documentación](#6-conclusiones-y-documentación)
-- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
-- [Cómo Ejecutar el Proyecto](#-cómo-ejecutar-el-proyecto)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Cómo Ejecutar el Proyecto](#cómo-ejecutar-el-proyecto)
 
 🧠 DESCRIPCION DEL PROYECTO
 
