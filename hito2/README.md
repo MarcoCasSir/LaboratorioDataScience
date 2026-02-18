@@ -1,156 +1,131 @@
-## 📑 Índice
+# Predicción y Clasificación de Alquileres en Madrid
 
-- [Descripción del Proyecto](#descripción-del-proyecto)
-- [Hoja de Ruta del Proyecto](#hoja-de-ruta-del-proyecto)
-  - [1. Inicio y Configuración](#1-inicio-y-configuración)
-  - [2. Entendimiento de los Datos](#2-entendimiento-de-los-datos-crisp-dm)
-  - [3. Análisis Exploratorio de Datos](#3-análisis-exploratorio-de-datos-eda)
-  - [4. Preparación de Datos con Pipelines](#4-preparación-de-datos-con-pipelines)
-  - [5. Modelado y Evaluación](#5-modelado-y-evaluación)
-  - [6. Conclusiones y Documentación](#6-conclusiones-y-documentación)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Cómo Ejecutar el Proyecto](#cómo-ejecutar-el-proyecto)
+## Indice
 
-🧠 DESCRIPCION DEL PROYECTO
+- [Predicción y Clasificación de Alquileres en Madrid](#predicción-y-clasificación-de-alquileres-en-madrid)
+  - [Indice](#indice)
+  - [Descripcion del Proyecto](#descripcion-del-proyecto)
+  - [Hoja de Ruta del Proyecto](#hoja-de-ruta-del-proyecto)
+    - [1. Inicio y Configuracion](#1-inicio-y-configuracion)
+    - [2. Entendimiento de los Datos (CRISP-DM)](#2-entendimiento-de-los-datos-crisp-dm)
+    - [3. Analisis Exploratorio de Datos (EDA)](#3-analisis-exploratorio-de-datos-eda)
+    - [4. Preparacion de Datos con Pipelines](#4-preparacion-de-datos-con-pipelines)
+    - [5. Modelado y Evaluacion](#5-modelado-y-evaluacion)
+      - [Tarea A: Regresion (price)](#tarea-a-regresion-price)
+      - [Tarea B: Clasificacion (balcony)](#tarea-b-clasificacion-balcony)
+    - [6. Conclusiones y Documentacion](#6-conclusiones-y-documentacion)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Como Ejecutar el Proyecto](#como-ejecutar-el-proyecto)
 
-Proyecto orientado al análisis, predicción y clasificación de alquileres en la provincia de Madrid mediante técnicas de ciencia de datos y machine learning.
+---
 
-- Predecir el precio de alquiler de una vivienda (tarea de **regresión**).
-- Clasificar si un inmueble dispone de balcón (tarea de **clasificación**).
+## Descripcion del Proyecto
 
-📘 HOJA DE RUTA DEL PROYECTO
+Proyecto orientado al analisis, prediccion y clasificacion de alquileres en la provincia de Madrid mediante tecnicas de ciencia de datos y machine learning.
 
-1. Inicio y Configuración
-   📌 Introducción
+Objetivos principales:
 
-📌 Importación de librerías
+- Predecir el precio de alquiler de una vivienda (tarea de regresion).
+- Clasificar si un inmueble dispone de balcon (tarea de clasificacion).
 
-Se utilizarán:
+---
 
-    Numpy
+## Hoja de Ruta del Proyecto
 
-    Pandas
+### 1. Inicio y Configuracion
 
-    Matplotlib
+- Introduccion al proyecto
+- Importacion de librerias: Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow/Keras
+- Carga del dataset: archivo CSV "Madrid Province Rent Data"
 
-    Seaborn
+---
 
-    Scikit‑learn
+### 2. Entendimiento de los Datos (CRISP-DM)
 
-    TensorFlow / Keras
+- Inspeccion inicial con `.info()`, `.describe()`, `.head()`
+- Limpieza de datos:
+  - Gestion de valores nulos
+  - Eliminacion de duplicados
+  - Conversion de tipos
+  - Correccion de inconsistencias en year_built, floor, price
 
-📌 Carga del dataset
+---
 
-Lectura del archivo CSV Madrid Province Rent Data. 2. Entendimiento de los Datos (CRISP‑DM)
-📌 Inspección inicial
+### 3. Analisis Exploratorio de Datos (EDA)
 
-Uso de:
+- Analisis univariante: histogramas de precio, area, habitaciones
+- Analisis bivariante y multivariante:
+  - Diagramas de dispersion
+  - Relplot con hue o size
+  - Matriz de correlacion
+- Deteccion de outliers
+- Estandarizacion para comparacion de distribuciones
 
-    .info()
+---
 
-    .describe()
+### 4. Preparacion de Datos con Pipelines
 
-    .head()
+- Definicion de features (X) y target (y)
+  - Regresion: price
+  - Clasificacion: balcony
+- Preprocesamiento:
+  - Numericas: imputacion, transformacion logaritmica, escalado
+  - Categoricas: One-Hot Encoding u Ordinal Encoding
+- Division del dataset en train y test
 
-Para revisar columnas como price, floor_area, bedrooms, district, etc.
-📌 Limpieza de datos (Data Wrangling)
+---
 
-    Gestión de valores nulos
+### 5. Modelado y Evaluacion
 
-    Eliminación de duplicados
-
-    Conversión de tipos (texto → numérico cuando corresponda)
-
-    Corrección de inconsistencias en year_built, floor, price
-
-3.  Análisis Exploratorio de Datos (EDA)
-    📌 Análisis univariante
-
-        Histogramas de precio, área, habitaciones, etc.
-
-📌 Análisis bivariante y multivariante
-
-    Diagramas de dispersión (ej. floor_area vs price)
-
-    relplot con hue o size para relaciones complejas
-
-    Matriz de correlación
-
-📌 Detección de outliers
-
-Identificación de valores extremos que puedan sesgar el modelo.
-📌 Estandarización
-
-Comparación de densidades en un dataframe escalado para evaluar distribuciones. 4. Preparación de Datos con Pipelines
-📌 Definición de features (X) y target (y)
-
-    Regresión: price
-
-    Clasificación: balcony
-
-📌 Pipeline de preprocesamiento
-
-    Variables numéricas:
-
-        Imputación
-
-        Transformación logarítmica (si hay asimetría)
-
-        Escalado / normalización
-
-    Variables categóricas:
-
-        One‑Hot Encoding u Ordinal Encoding (district, orientation, etc.)
-
-📌 División del dataset
-
-Separación en train y test. 5. Modelado y Evaluación
-🟦 Tarea A: Regresión (variable price)
+#### Tarea A: Regresion (price)
 
 Modelos:
 
-    LinearRegression
+- LinearRegression
+- RandomForestRegressor
+- Red neuronal con TensorFlow/Keras
 
-    RandomForestRegressor
+Metricas:
 
-    Red neuronal con TensorFlow/Keras
+- MSE
+- RMSE
+- MAE
+- R2
 
-Métricas:
-
-    MSE
-
-    RMSE
-
-    MAE
-
-    R²
-
-🟩 Tarea B: Clasificación (variable balcony)
+#### Tarea B: Clasificacion (balcony)
 
 Modelos:
 
-    LogisticRegression
+- LogisticRegression
+- DecisionTreeClassifier
+- Red neuronal con TensorFlow/Keras
 
-    DecisionTreeClassifier
+Metricas:
 
-    Red neuronal con TensorFlow/Keras
+- Accuracy
+- Precision
+- Recall
+- F1-score
 
-Métricas:
+---
 
-    Accuracy
+### 6. Conclusiones y Documentacion
 
-    Precision
+- Justificacion de decisiones metodologicas
+- Interpretacion de resultados
+- Limitaciones del estudio
+- Propuestas de mejora futura
 
-    Recall
+---
 
-    F1‑score
+## Tecnologias Utilizadas
 
-6. Conclusiones y Documentación
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+- TensorFlow / Keras
 
-   Justificación de las decisiones metodológicas
+---
 
-   Interpretación de resultados
-
-   Limitaciones del estudio
-
-   Propuestas de mejora futura
+## Como Ejecutar el Proyecto
