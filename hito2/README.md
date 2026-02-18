@@ -1,10 +1,28 @@
+## 📑 Índice
+
+- [Descripción del Proyecto](#-descripción-del-proyecto)
+- [Hoja de Ruta](#-hoja-de-ruta-del-proyecto)
+  - [1. Inicio y Configuración](#1-inicio-y-configuración)
+  - [2. Entendimiento de los Datos](#2-entendimiento-de-los-datos-crisp-dm)
+  - [3. Análisis Exploratorio de Datos](#3-análisis-exploratorio-de-datos-eda)
+  - [4. Preparación de Datos con Pipelines](#4-preparación-de-datos-con-pipelines)
+  - [5. Modelado y Evaluación](#5-modelado-y-evaluación)
+  - [6. Conclusiones y Documentación](#6-conclusiones-y-documentación)
+- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
+- [Cómo Ejecutar el Proyecto](#-cómo-ejecutar-el-proyecto)
+
+🧠 DESCRIPCION DEL PROYECTO
+
+Proyecto orientado al análisis, predicción y clasificación de alquileres en la provincia de Madrid mediante técnicas de ciencia de datos y machine learning.
+
+- Predecir el precio de alquiler de una vivienda (tarea de **regresión**).
+- Clasificar si un inmueble dispone de balcón (tarea de **clasificación**).
+
 📘 HOJA DE RUTA DEL PROYECTO
-Predicción y Clasificación de Alquileres en Madrid
 
 1. Inicio y Configuración
    📌 Introducción
 
-Proyecto orientado al análisis, predicción y clasificación de alquileres en la provincia de Madrid mediante técnicas de ciencia de datos y machine learning.
 📌 Importación de librerías
 
 Se utilizarán:
