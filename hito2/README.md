@@ -1,4 +1,4 @@
-## 📑 Índice
+📑 Índice
 
 - [Descripción del Proyecto](#-descripción-del-proyecto)
 - [Hoja de Ruta](#-hoja-de-ruta-del-proyecto)
